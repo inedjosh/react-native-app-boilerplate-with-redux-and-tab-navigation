@@ -9,10 +9,10 @@ import AppNavigation from "./Navigation/AppNavigation";
 export default function App() {
 
   const [loaded] = useFonts({
-    bold: require("./assets/fonts/Roboto-Bold.ttf"),
-    medium: require("./assets/fonts/Roboto-Medium.ttf"),
-    light: require("./assets/fonts/Roboto-Light.ttf"),
-    regular: require("./assets/fonts/Roboto-Regular.ttf"),
+    bold: require("./assets/fonts/Poppins-Bold.ttf"),
+    medium: require("./assets/fonts/Poppins-Medium.ttf"),
+    light: require("./assets/fonts/Poppins-Light.ttf"),
+    regular: require("./assets/fonts/Poppins-Regular.ttf"),
   });
   if (!loaded) {
     return null;

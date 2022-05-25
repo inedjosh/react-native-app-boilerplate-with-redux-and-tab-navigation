@@ -4,8 +4,11 @@ import MyTab from "./TabNavigator";
 import HomeScreen from "../Screens/HomeScreen";
 import Wallet from "../Screens/Wallet";
 import Savings from "../Screens/Savings";
-import { Profiler } from "react/cjs/react.production.min";
 import Profile from "../Screens/Profile";
+import Success from "../Screens/General/Success";
+import Accounts from "../Screens/Accounts";
+import CashIn from "../Screens/CashIn";
+import CashOut from "../Screens/CashOut";
 
 
 const Stack = createNativeStackNavigator();
@@ -29,6 +32,18 @@ export function MainStack() {
       </Stack.Screen>
       <Stack.Screen name="ProfileScreen">
         {(props) => <Profile {...props} />}
+      </Stack.Screen>
+      <Stack.Screen name="SuccessScreen">
+        {(props) => <Success {...props} />}
+      </Stack.Screen>
+      <Stack.Screen name="AccountsScreen">
+        {(props) => <Accounts {...props} />}
+      </Stack.Screen>
+      <Stack.Screen name="CashInScreen">
+        {(props) => <CashIn {...props} />}
+      </Stack.Screen>
+      <Stack.Screen name="CashOutScreen">
+        {(props) => <CashOut {...props} />}
       </Stack.Screen>
     </Stack.Navigator>
   );

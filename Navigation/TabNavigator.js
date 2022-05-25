@@ -5,6 +5,9 @@ import Profile from "../Screens/Profile";
 import Savings from "../Screens/Savings";
 import Wallet from "../Screens/Wallet";
 import HomeScreen from "../Screens/HomeScreen";
+import HomeSvg from "../svg/HomeSvg";
+import WalletSvg from "../svg/WalletSvg";
+import ProfileSvg from "../svg/ProfileSvg";
 
 
 const Tab = createMaterialBottomTabNavigator();
@@ -37,7 +40,8 @@ function MyIosTabs() {
         tabBarLabelStyle
         labeled={true}
         options={{
-          tabBarLabel: <Text style={styles.text}>Home</Text>
+          tabBarLabel: <Text style={styles.text}>Home</Text>,
+          tabBarIcon: ({ color }) => <HomeSvg color={color} />
         }}
       />
       <Tab.Screen
@@ -45,24 +49,24 @@ function MyIosTabs() {
         component={Wallet}
         labeled={true}
         options={{
-          tabBarLabel: <Text style={styles.text}>Wallet</Text>
-     
+          tabBarLabel: <Text style={styles.text}>Wallet</Text>,
+          tabBarIcon: ({ color }) => <WalletSvg color={color} />,
         }}
       />
       <Tab.Screen
         name="SavingsScreen"
         component={Savings}
         options={{
-          tabBarLabel: <Text style={styles.text}>Savings</Text>
-        
+          tabBarLabel: <Text style={styles.text}>Savings</Text>,
+          tabBarIcon: ({ color }) => <WalletSvg color={color} />,
         }}
       />
       <Tab.Screen
         name="ProfileScreen"
         component={Profile}
         options={{
-          tabBarLabel: <Text style={styles.text}>Support</Text>
-     
+          tabBarLabel: <Text style={styles.text}>Support</Text>,
+          tabBarIcon: ({ color }) => <ProfileSvg color={color} />,
         }}
       />
       
@@ -74,7 +78,7 @@ function MyAndroidTabs() {
   return (
     <Tab.Navigator
       initialRouteName="Home"
-      activeColor={'#ccc'}
+      activeColor={'#3300cc'}
       inactiveColor="#c0c0c0"
       barStyle={{ backgroundColor: "#fff" }}
       labeled={true}
@@ -97,22 +101,24 @@ function MyAndroidTabs() {
         name="Home"
         component={HomeScreen}
         options={{
-          tabBarLabel: <Text style={styles.text}>Home</Text>
+          tabBarLabel: <Text style={styles.text}>Home</Text>,
+          tabBarIcon: ({ color }) => <HomeSvg color={color} />,
         }}
       />
       <Tab.Screen
         name="WalletScreen"
         component={Wallet}
         options={{
-          tabBarLabel: <Text style={styles.text}>Wallet</Text>
+          tabBarLabel: <Text style={styles.text}>Wallet</Text>,
+          tabBarIcon: ({ color }) => <WalletSvg color={color} />,
         }}
       />
       <Tab.Screen
         name="SavingsScreen"
         component={Savings}
         options={{
-          tabBarLabel: <Text style={styles.text}>Savings</Text>
-  
+          tabBarLabel: <Text style={styles.text}>Savings</Text>,
+          tabBarIcon: ({ color }) => <WalletSvg color={color} />,
         }}
       />
    
@@ -120,8 +126,8 @@ function MyAndroidTabs() {
         name="ProfileScreen"
         component={Profile}
         options={{
-          tabBarLabel: <Text style={styles.text}>Settings</Text>
-
+          tabBarLabel: <Text style={styles.text}>Settings</Text>,
+          tabBarIcon: ({ color }) => <ProfileSvg color={color} />,
         }}
       />
     </Tab.Navigator>

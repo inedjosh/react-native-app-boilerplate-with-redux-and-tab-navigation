@@ -1,14 +1,20 @@
 {
   "expo": {
-    "name": "instasave",
-    "slug": "instasave",
-    "version": "1.0.0",
+    "name": "thrifty",
+    "slug": "thrifty",
+    "version": "1.0.1",
     "orientation": "portrait",
+    "description": "",
+    "androidStatusBar": {
+      "backgroundColor": "#000",
+      "barStyle": "light-content",
+      "translucent": false
+    },
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "resizeMode": "cover",
+      "backgroundColor": "#00009E"
     },
     "updates": {
       "fallbackToCacheTimeout": 0

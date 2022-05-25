@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const SplashThree = () => {
+const CashOut = () => {
   return (
     <View>
-      <Text>SplashThree</Text>
+      <Text>CashOut</Text>
     </View>
   )
 }
 
-export default SplashThree
+export default CashOut
 
 const styles = StyleSheet.create({})

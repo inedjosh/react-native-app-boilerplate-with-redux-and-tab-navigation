@@ -12,7 +12,7 @@ import LinkText from '../../components/General/LinkText'
 import Color from '../../constants/Color'
 import BodyText from '../../components/General/BodyText'
 
-const Login = ({navigation}) => {
+const ResetPasword = ({navigation}) => {
 
     const dispatch = useDispatch()
 
@@ -24,35 +24,31 @@ const Login = ({navigation}) => {
     <SafeAreaView style={myStyles.screen}>
     <ScrollView>
           <View style={styles.mainView}>
-      <View style={{marginVertical:30, justifyContent: 'center', alignItems: 'center'}}>
-        <Logo />
-      </View>
-        <View style={{paddingHorizontal:20, marginVertical:15}}>
-        <GreatingText style={styles.greatingText}>Hello Joshua      👋🏾</GreatingText>
-        <DescriptionText>Login to proceed to yur account or create a new account</DescriptionText>
+     
+        <View style={{paddingHorizontal:20, marginVertical:15, marginTop:40}}>
+        <GreatingText style={styles.greatingText}>Reset your password</GreatingText>
+        <DescriptionText style={{marginTop:15}}>Please enter your new password and confirm
+the password.</DescriptionText>
         </View>
-        <View style={{marginTop: -40}}>
+        <View style={{marginTop: -15}}>
          <View style={styles.input}>
          <Input 
-            placeholder={'Username'}
+            placeholder={'New password'}
           />
          </View>
           <View style={styles.input}>
           <Input 
-            placeholder={"\u2B24  \u2B24  \u2B24  \u2B24  \u2B24  \u2B24 "}
+            placeholder={"Confirm password"}
           />
           </View>
 
         </View>
         <View style={styles.btn}>
-        <LinkText onPress={() => navigation.navigate('ForgotPasswordScreen')} style={{color: Color.textGrey, textAlign: 'center', marginBottom:33}}>Forget ypur PIN or this isnt you? </LinkText>
+       
           <ButtonMain>
-            Sign in
+           Reset passowrd
           </ButtonMain>
-          <View style={styles.alignText}>
-          <BodyText style={{color: Color.textGrey}}>Are you new here? </BodyText>
-          <LinkText onPress={() => navigation.navigate('SignupScreen')} style={styles.linkText}>Sign Up</LinkText>
-          </View>
+          
         </View>
       </View>
       </ScrollView>
@@ -60,7 +56,7 @@ const Login = ({navigation}) => {
   )
 }
 
-export default Login
+export default ResetPasword
 
 const styles = StyleSheet.create({
   screen:{
@@ -81,7 +77,7 @@ const styles = StyleSheet.create({
       marginTop:60
     },
     btn:{
-      marginTop:50
+      marginTop:100
     },
     alignText:{
       justifyContent: 'center',
